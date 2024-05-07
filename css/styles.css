@@ -11,16 +11,37 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.converter {
-  /* text-align: center; */
+h3 {
+  font-size: 2em;
+  text-align: center;
+  margin: 1em 0;
 }
+
+.converter__container {
+  margin: 0.5em;
+}
+
+.converter__label {
+  margin-right: 0.5em;
+}
+
+.converter__input {
+  margin-right: 1rem;
+}
+
+.converter__button {
+  justify-content: center;
+}
+
 
 .btn {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.69rem;
+  font-size: 1.5rem;
   letter-spacing: 0%;
   text-align: center;
 
@@ -32,7 +53,7 @@ body {
   display: inline-block;
   line-height: 1.5rem;
   padding: 0.63rem 2rem 0.63rem 2rem;
-  /* margin-bottom: 7rem; */
+  margin: 1em 0;
 }
 
 .btn:active {
@@ -41,15 +62,12 @@ body {
 }
 
 .converter__label {
-  /* display: block; */
   font-size: 1.13rem;
-  font-weight: 700;
   line-height: 1.69rem;
   order: 0;
 }
 
 .converter__input {
-  /* display: block; */
   background: rgba(57, 62, 70, 0.5);
   border-radius: 1rem;
   padding-left: 1.5rem;
@@ -57,12 +75,23 @@ body {
 
   color: #fff;
   font-size: 1.13rem;
-  font-weight: 700;
   line-height: 1.69rem;
   text-align: center;
 }
 
-.contact__input:focus {
-  border: 3px solid #00adb5;
+/* .converter__input:focus {
+  border: 1px solid #00adb5;
+} */
+
+.converter__select {
+  font-size: 1em;
+  padding: 0.5em; /* Поля внутри элемента select */
+  border-radius: 0.5em; /* Скругление углов */
+  background-color: #333; /* Фоновый цвет */
+  color: #fff; /* Цвет текста */
 }
 
+.converter__select option {
+  background-color: #333; /* Фоновый цвет для опций */
+  color: #fff; /* Цвет текста для опций */
+}

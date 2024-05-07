@@ -3,6 +3,7 @@ const input = document.getElementById('input-from');
 const chooseSubst = document.getElementById('choose-subst');
 const molarMassInput = document.getElementById('molar-mass');
 const resultLabel = document.getElementById('result-label');
+const niceDayHeader = document.getElementById('have-a-nice-day');
 
 chooseSubst.addEventListener('change', function() {
   var molarMass;
@@ -50,4 +51,5 @@ btn.addEventListener('click', function () {
 
   // Выводим результат конвертации на страницу
   resultLabel.textContent = `${inputValue} мкг/мл ≈ ${molToMl.toFixed(3)} ммоль/л`;
+  niceDayHeader.textContent = '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Хорошего дня!';
 });
