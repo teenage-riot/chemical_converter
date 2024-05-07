@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="tab-icon.ico" type="image/x-icon">
+
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Химический преобразователь</title>
+</head>
+
+<body>
+  <div class="converter">
+    <h3>Привет, Таня!</h3>
+    <div class="converter__container">
+      <label class="converter__label" for="input-from">Значение:</label>
+      <input class="converter__input" type="number" id="input-from" value="0">
+      <select class="converter__select" id="choose-from">
+        <option value="mkg-ml">мкг/мл</option>
+      </select>
+    </div>
+    <div class="converter__container">
+      <label class="converter__label" for="choose-subst">Вещество: </label>
+      <select class="converter__select" id="choose-subst">
+        <option value="lithium">Литий</option>
+        <option value="hydrogen">Водород</option>
+        <option value="carbon">Углерод</option>
+        <option value="nitrogen">Азот</option>
+        <option value="oxygen">Кислород</option>
+        <option value="fluorine">Фтор</option>
+        <option value="sodium">Натрий</option>
+        <option value="magnesium">Магний</option>
+        <option value="aluminium">Алюминий</option>
+        <option value="silicon">Кремний</option>
+        <option value="smth-else">Что-то ещё</option>
+      </select>
+    </div>
+    <div class="converter__container">
+      <label class="converter__label" for="molar-mass">Молярная масса: </label>
+      <input class="converter__input" type="number" id="molar-mass" value="6.941">
+      <label class="converter__label" for="molar-mass">а. е. м.</label>
+    </div>
+    <div class="converter__container">
+      <label class="converter__label" for="choose-to">Результат в:</label>
+      <select class="converter__select" id="choose-to">
+        <option value="mkg-ml">ммоль/л</option>
+      </select>
+    </div>
+    <button class="btn">Конвертировать</button>
+    <div class="converter__container">
+      <label class="converter__label">Ответ: </label>
+      <label class="converter__label" id="result-label"></label>
+    </div>
+  </div>
+
+  <script src="script/convert.js"></script>
+</body>
+
+</html>
