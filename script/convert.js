@@ -50,6 +50,6 @@ btn.addEventListener('click', function () {
   const molToMl = molToLiter * 1000;
 
   // Выводим результат конвертации на страницу
-  resultLabel.textContent = `${inputValue} мкг/мл ≈ ${molToMl.toFixed(3)} ммоль/л`;
-  niceDayHeader.textContent = '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧ Хорошего дня!';
+  resultLabel.textContent = `${inputValue} мкг/мл ≈ ${molToMl.toFixed(4)} ммоль/л`;
+  niceDayHeader.innerHTML = '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧<br><br>Хорошего дня!';
 });
