@@ -1,5 +1,6 @@
 const btn = document.querySelector('.btn');
 const input = document.getElementById('input-from');
+const chooseFrom = document.getElementById('choose-from');
 const chooseSubst = document.getElementById('choose-subst');
 const molarMassInput = document.getElementById('molar-mass');
 const resultLabel = document.getElementById('result-label');
@@ -39,10 +40,17 @@ molarMassInput.addEventListener("input", function() {
 })
 
 btn.addEventListener('click', function () {
-  const inputValue = parseFloat(input.value);
-  
+  const convertedValue = parseFloat(input.value);
+  var inputValue = convertedValue;
+  var conversionUnits = 'мкг/мл';
   
   molarMass = molarMassInput.value;
+
+  // Если значения даны в мкг/л, то сперва конвертируем их в мкг/мл
+  if (chooseFrom.value == 'mkg-l') {
+    inputValue /= 1000;
+    conversionUnits = 'мкг/л';
+} 
 
   // Конвертируем значение из мкг/мл в ммоль/л
   const grammToLiter = inputValue / 1000;
@@ -50,6 +58,6 @@ btn.addEventListener('click', function () {
   const molToMl = molToLiter * 1000;
 
   // Выводим результат конвертации на страницу
-  resultLabel.textContent = `${inputValue} мкг/мл ≈ ${molToMl.toFixed(4)} ммоль/л`;
+  resultLabel.textContent = `${convertedValue} ${conversionUnits} ≈ ${molToMl.toFixed(4)} ммоль/л`;
   niceDayHeader.innerHTML = '(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧<br><br>Хорошего дня!';
 });

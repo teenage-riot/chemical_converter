@@ -82,9 +82,9 @@ h3 {
   text-align: center;
 }
 
-/* .converter__input:focus {
-  border: 1px solid #00adb5;
-} */
+.converter__input:focus {
+  outline: 1px solid #20a13a;
+}
 
 .converter__select {
   font-size: 1em;
